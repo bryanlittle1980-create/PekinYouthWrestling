@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Team Schedule</title>
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+    <style>
+        body { font-family: system-ui; padding: 20px; background: #d2a9a9; }
+        #calendar { max-width: 900px; margin: 40px auto; }
+    </style>
+</head>
+
+
+<header>
+    <a href="index.html">Home</a>
+</header>
+
+<body>
+<div id='calendar'></div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            headerToolbar: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,listWeek'
+            },
+            events: [
+
+                { title: 'Practice', start: '2026-11-09T18:00:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2026-11-11T18:00:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2026-11-12T18:00:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2026-11-16T18:00:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2026-11-19T18:00:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2026-11-23T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2026-11-30T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2026-12-02T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2026-12-03T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2026-12-07T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2026-12-09T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2026-12-10T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2026-12-14T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2026-12-16T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2026-12-17T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2026-12-23T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2026-12-30T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-01-04T17:30:00',backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-01-06T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-01-07T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-01-11T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-01-13T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-01-14T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-01-20T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-01-21T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-01-25T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-01-28T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-02-01T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-02-04T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-02-08T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-02-10T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-02-11T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-02-17T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-02-18T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-02-22T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-02-24T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-02-25T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-03-01T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-03-02T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-03-04T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-03-08T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Practice', start: '2027-03-10T17:30:00', backgroundColor: '#8635dc'},
+                { title: 'Railer Rumble- Lincoln', start: '2025-12-07' },
+                { title: 'CICC Classic - Springfield ', start: '2025-12-14' },
+                { title: 'Clinton Challenge', start: '2025-12-21' },
+                { title: 'New Years Bash - Dunlap', start: '2025-12-27' },
+
+            ],
+            eventClick: function(info) {
+                if (info.event.url) {
+                    info.jsEvent.preventDefault();
+                    window.open(info.event.url, '_blank');
+                }
+            }
+        });
+        calendar.render();
+    });
+</script>
+
+</body>
+</html>
