@@ -1,7 +1,11 @@
-body {
+body
+{
     background-color: #a92525;
     color: #d1c4c4; /* change this to any color you want */
-        }
+}
+h1{
+    text-align: center;
+}
     a,
     a:link,
     a:visited,
